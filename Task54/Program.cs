@@ -37,7 +37,6 @@ void PrintMatrix(int[,] matrix)
 Console.WriteLine("Введите количество строк m и количество столбцов n через Enter ");
 int m = Convert.ToInt32(Console.ReadLine());
 int n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine();
 
 void SortingByDescendingMatrix(int[,] matrix)
 {
