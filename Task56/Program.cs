@@ -38,7 +38,7 @@ void PrintMatrix(int[,] matrix)
 Console.WriteLine("Введите количество строк m и количество столбцов n через Enter: ");
 int m = Convert.ToInt32(Console.ReadLine());
 int n = Convert.ToInt32(Console.ReadLine());
-int[] arrayOfSums = new int[m];
+int[] arrayOfSums = new int[m]; //созд. новый массив из сумм строк матрицы
 Console.WriteLine();
 int[,] matrix = FillMatrix(m, n);
 PrintMatrix(matrix);
@@ -52,9 +52,10 @@ for (int i = 0; i < matrix.GetLength(0); i++)
         sum += matrix[i, j];
     }
     arrayOfSums[i] = sum;
-    Console.WriteLine($"Сумма {i + 1} строки = {sum}");
+    Console.WriteLine($"Сумма {i + 1} строки = {sum}"); //строка по счёту и сумма её элементов
 }
 //Console.WriteLine(string.Join(", ", arrayOfSums));
+
 int minSum = arrayOfSums[0];
 int minLine = 0;
 for (int i = 0; i < arrayOfSums.Length; i++)
@@ -62,7 +63,7 @@ for (int i = 0; i < arrayOfSums.Length; i++)
     if (arrayOfSums[i] <= minSum)
     {
         minSum = arrayOfSums[i];
-        minLine = i + 1;
+        minLine = i + 1;//какая по счёту строка, а не индекс строки
     }
 }
 Console.WriteLine($"Строка с минимальной суммой элементов: {minLine}");
