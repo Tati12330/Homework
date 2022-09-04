@@ -4,13 +4,13 @@
 
 Console.WriteLine("Введите число N: ");
 int number = Convert.ToInt32(Console.ReadLine());
-if (number>0)
+if (number > 0)
 {
-NumbersN(number);
+    NumbersN(number);
 }
 else
 {
-Console.WriteLine("Введите значение N больше 0");
+    Console.WriteLine("Введите значение N больше 0");
 }
 void NumbersN(int n)
 {
